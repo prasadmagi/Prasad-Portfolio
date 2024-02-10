@@ -5,6 +5,13 @@ body {
   box-sizing: border-box;
 }
 
+.main-div {
+  /* display: flex; */
+  flex: 1;
+  /* position: relative;
+  min-height: 100vh; */
+}
+
 .nav-header {
   background-color: rgb(51, 131, 236);
   padding: 0 200px;
@@ -65,7 +72,7 @@ nav {
     top: 58px;
     background-color: rgb(177, 158, 243);
     width: 100%;
-    height: calc(100vh - 58px);
+    /* height: calc(100vh - 58px); */
     padding-top: 60px;
     gap: 10vh;
   }
@@ -84,23 +91,27 @@ nav {
   width: 100%;
   height: 100vh;
   padding: 0 200px;
+  border: 1px solid red;
 }
 
-main{
-  border: 1px solid red;
-  width: 100%;
-  height: 50vh;
+main {
+  padding-bottom: 2.5rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  /* position: relative; */
+  flex-wrap: wrap;
+  padding: 2em 4em;
+  width: 100%;
+  height: 60vh;
+  
 }
-main > div {
+.myCard {
   width: 50%;
-  height: inherit;
-  background-color: rgb(147, 199, 231);
-  border: 1px solid black;
+  height: 50vh;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  border: 1px solid #ff0404;
+  padding: 4em;
 }
+
 .section-1 {
   /* left: 0; */
 }
@@ -109,65 +120,126 @@ main > div {
 }
 
 @media screen and (max-width: 768px) {
-  .main-content-1{
+  .main-content-1 {
     padding: 0 20px;
     display: flex;
     flex-direction: column;
   }
-  .section-2{
+  .section-2 {
     display: none;
   }
 }
 /* main-content-1 css end here */
 
-.main-content-2{
+.main-content-2 {
   display: flex;
-  justify-content: start;
-  align-items: baseline;
-  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   height: 100vh;
   padding: 0 200px;
+  /* position: absolute; */
 }
-.cards {
-  background-color: aqua;
-  width: 300px;
-  height: 300px;
-  margin: 10px;
-}
+
 @media screen and (max-width: 768px) {
-  .main-content-2{
+  .main-content-2 {
+    width: 100%;
+    height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    /* align-items: start; */
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+}
+.projects-section{
+  
+  padding-bottom: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 4em;
+  width: 100%;
+  height: 100vh;
+}
+.cards{
+  /* width: 100vw; */
+  /* height: 50vh; */
+  height: 50vh;
+  width: 100vw;
+  border: 3px solid green;
+  display: flex;
+  padding: 1em;
+  flex-wrap: wrap;
 
+
+}
+.card{
+  border: 1px solid red;
+  width: 30vh;
+  height: 30vh;
+  margin: 0.4em;
+}
+@media screen and (max-width: 768px) {
+  .cards{
+    width: 100%;
+    border: 3px solid green;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    flex-wrap: wrap;
+  }
+  .main-div{
+    flex: 1;
   }
 }
 .footer-content {
   /* width: 100vw; */
-  height: 80px;
-  background-color: rgb(16, 182, 242);
-  color: rgb(240, 245, 247);
-  padding: 0 200px;
-  position: relative;
-  left: 0;
+  /* position: absolute;
   bottom: 0;
-  right: 0;
+  width: 100%;
+  height: 2.5rem;
+  background-color: cadetblue; */
+
+  min-height: 50px;
+  background: rgb(165, 162, 252);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  text-align: center;
   align-items: center;
-  flex-direction: row;
 }
 
 .footer-content > div {
-  border: 1px solid red;
+  border: 0px solid red;
   width: 25%;
 }
+
+@media screen and (max-width: 1325px) {
+  .footer {
+    padding: 4em 0;
+    background-color: antiquewhite;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .main-content-2 {
+    height: 80vh;
+    width: 100%;
+    /* background-color: blue; */
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+  }
+  .cards {
+    width: 30%;
+    padding: 0;
+  }
   .footer-content {
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
+    padding: 10px 20px;
   }
 }
